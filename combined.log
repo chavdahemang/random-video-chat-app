@@ -1,0 +1,109 @@
+{"level":"info","message":"🚀 Server running on port 5000","timestamp":"2026-04-07T17:16:48.443Z"}
+{"level":"info","message":"Health check: http://localhost:5000/health","timestamp":"2026-04-07T17:16:48.445Z"}
+{"level":"info","message":"Network: http://192.168.56.1:5000","timestamp":"2026-04-07T17:16:48.448Z"}
+{"level":"info","message":"Network: http://192.168.1.18:5000","timestamp":"2026-04-07T17:16:48.449Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: tmTUNW6wiWsCE-1ZAAAB","timestamp":"2026-04-07T17:16:48.582Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: YvJctLficm8UvNxhAAAD","timestamp":"2026-04-07T17:16:51.399Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: YvJctLficm8UvNxhAAAD, reason: transport error","timestamp":"2026-04-07T17:17:02.658Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: ORkRvbC3wb3Hy5FRAAAG","timestamp":"2026-04-07T17:17:02.857Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: tmTUNW6wiWsCE-1ZAAAB, reason: transport error","timestamp":"2026-04-07T17:17:04.289Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: fSmY92j_y-Ql_kG-AAAJ","timestamp":"2026-04-07T17:17:04.470Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"ORkRvbC3wb3Hy5FRAAAG looking for partner. Queue size: 0","timestamp":"2026-04-07T17:17:05.451Z"}
+{"level":"info","message":"fSmY92j_y-Ql_kG-AAAJ looking for partner. Queue size: 1","timestamp":"2026-04-07T17:17:06.654Z"}
+{"level":"info","message":"Paired users: ORkRvbC3wb3Hy5FRAAAG with fSmY92j_y-Ql_kG-AAAJ","timestamp":"2026-04-07T17:17:06.657Z"}
+{"level":"info","message":"ORkRvbC3wb3Hy5FRAAAG skipped","timestamp":"2026-04-07T17:17:27.860Z"}
+{"level":"info","message":"Paired users: fSmY92j_y-Ql_kG-AAAJ with ORkRvbC3wb3Hy5FRAAAG","timestamp":"2026-04-07T17:17:27.861Z"}
+{"level":"info","message":"User disconnected: fSmY92j_y-Ql_kG-AAAJ, reason: transport error","timestamp":"2026-04-07T17:17:32.559Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: IPbbi8yrEvz5VfiDAAAM","timestamp":"2026-04-07T17:17:32.683Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: ORkRvbC3wb3Hy5FRAAAG, reason: transport error","timestamp":"2026-04-07T17:17:33.725Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: WJfk1-b-rP6tKLeUAAAP","timestamp":"2026-04-07T17:17:33.965Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"IPbbi8yrEvz5VfiDAAAM looking for partner. Queue size: 0","timestamp":"2026-04-07T17:17:37.040Z"}
+{"level":"info","message":"WJfk1-b-rP6tKLeUAAAP looking for partner. Queue size: 1","timestamp":"2026-04-07T17:17:37.852Z"}
+{"level":"info","message":"Paired users: IPbbi8yrEvz5VfiDAAAM with WJfk1-b-rP6tKLeUAAAP","timestamp":"2026-04-07T17:17:37.854Z"}
+{"level":"info","message":"WJfk1-b-rP6tKLeUAAAP skipped","timestamp":"2026-04-07T17:17:40.634Z"}
+{"level":"info","message":"Paired users: IPbbi8yrEvz5VfiDAAAM with WJfk1-b-rP6tKLeUAAAP","timestamp":"2026-04-07T17:17:40.637Z"}
+{"level":"info","message":"WJfk1-b-rP6tKLeUAAAP skipped","timestamp":"2026-04-07T17:18:01.843Z"}
+{"level":"info","message":"Paired users: IPbbi8yrEvz5VfiDAAAM with WJfk1-b-rP6tKLeUAAAP","timestamp":"2026-04-07T17:18:01.844Z"}
+{"level":"info","message":"User disconnected: IPbbi8yrEvz5VfiDAAAM, reason: transport error","timestamp":"2026-04-07T17:18:20.015Z"}
+{"level":"warn","message":"User WJfk1-b-rP6tKLeUAAAP heartbeat timeout, disconnecting","timestamp":"2026-04-07T17:18:48.470Z"}
+{"level":"info","message":"User disconnected: WJfk1-b-rP6tKLeUAAAP, reason: server namespace disconnect","timestamp":"2026-04-07T17:18:48.473Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: M_DpmeYixxltT-DrAAAS","timestamp":"2026-04-07T17:22:41.477Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: M_DpmeYixxltT-DrAAAS, reason: transport error","timestamp":"2026-04-07T17:22:47.069Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: h1Ut-_GidSJffiQrAAAV","timestamp":"2026-04-07T17:22:47.247Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: Ts8oCqNbpKnEFQlmAAAY","timestamp":"2026-04-07T17:22:49.049Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"Ts8oCqNbpKnEFQlmAAAY looking for partner. Queue size: 0","timestamp":"2026-04-07T17:23:15.128Z"}
+{"level":"info","message":"h1Ut-_GidSJffiQrAAAV looking for partner. Queue size: 1","timestamp":"2026-04-07T17:23:15.894Z"}
+{"level":"info","message":"Paired users: Ts8oCqNbpKnEFQlmAAAY with h1Ut-_GidSJffiQrAAAV","timestamp":"2026-04-07T17:23:15.895Z"}
+{"level":"info","message":"Ts8oCqNbpKnEFQlmAAAY skipped","timestamp":"2026-04-07T17:23:18.988Z"}
+{"level":"info","message":"Paired users: h1Ut-_GidSJffiQrAAAV with Ts8oCqNbpKnEFQlmAAAY","timestamp":"2026-04-07T17:23:18.989Z"}
+{"level":"info","message":"Ts8oCqNbpKnEFQlmAAAY skipped","timestamp":"2026-04-07T17:23:20.984Z"}
+{"level":"info","message":"Paired users: h1Ut-_GidSJffiQrAAAV with Ts8oCqNbpKnEFQlmAAAY","timestamp":"2026-04-07T17:23:20.987Z"}
+{"level":"info","message":"User disconnected: h1Ut-_GidSJffiQrAAAV, reason: transport error","timestamp":"2026-04-07T17:23:22.422Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: p2fzk3nGwHIZSYNiAAAb","timestamp":"2026-04-07T17:23:22.567Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"p2fzk3nGwHIZSYNiAAAb looking for partner. Queue size: 1","timestamp":"2026-04-07T17:23:24.711Z"}
+{"level":"info","message":"Paired users: Ts8oCqNbpKnEFQlmAAAY with p2fzk3nGwHIZSYNiAAAb","timestamp":"2026-04-07T17:23:24.714Z"}
+{"level":"info","message":"User disconnected: Ts8oCqNbpKnEFQlmAAAY, reason: transport error","timestamp":"2026-04-07T17:23:38.295Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: AW2LLLMmUVPUF3vZAAAe","timestamp":"2026-04-07T17:23:38.441Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: p2fzk3nGwHIZSYNiAAAb, reason: transport error","timestamp":"2026-04-07T17:23:39.729Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: NxV8VKfR3kBvdVBqAAAh","timestamp":"2026-04-07T17:23:39.892Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"NxV8VKfR3kBvdVBqAAAh looking for partner. Queue size: 0","timestamp":"2026-04-07T17:23:42.048Z"}
+{"level":"info","message":"AW2LLLMmUVPUF3vZAAAe looking for partner. Queue size: 1","timestamp":"2026-04-07T17:23:43.046Z"}
+{"level":"info","message":"Paired users: NxV8VKfR3kBvdVBqAAAh with AW2LLLMmUVPUF3vZAAAe","timestamp":"2026-04-07T17:23:43.048Z"}
+{"level":"info","message":"AW2LLLMmUVPUF3vZAAAe skipped","timestamp":"2026-04-07T17:23:53.635Z"}
+{"level":"info","message":"Paired users: NxV8VKfR3kBvdVBqAAAh with AW2LLLMmUVPUF3vZAAAe","timestamp":"2026-04-07T17:23:53.636Z"}
+{"level":"info","message":"NxV8VKfR3kBvdVBqAAAh skipped","timestamp":"2026-04-07T17:23:55.048Z"}
+{"level":"info","message":"Paired users: AW2LLLMmUVPUF3vZAAAe with NxV8VKfR3kBvdVBqAAAh","timestamp":"2026-04-07T17:23:55.049Z"}
+{"level":"info","message":"AW2LLLMmUVPUF3vZAAAe skipped","timestamp":"2026-04-07T17:24:11.338Z"}
+{"level":"info","message":"Paired users: NxV8VKfR3kBvdVBqAAAh with AW2LLLMmUVPUF3vZAAAe","timestamp":"2026-04-07T17:24:11.340Z"}
+{"level":"info","message":"NxV8VKfR3kBvdVBqAAAh skipped","timestamp":"2026-04-07T17:24:12.523Z"}
+{"level":"info","message":"Paired users: AW2LLLMmUVPUF3vZAAAe with NxV8VKfR3kBvdVBqAAAh","timestamp":"2026-04-07T17:24:12.523Z"}
+{"level":"info","message":"User disconnected: NxV8VKfR3kBvdVBqAAAh, reason: transport error","timestamp":"2026-04-07T17:24:14.115Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:14.240Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: AW2LLLMmUVPUF3vZAAAe, reason: transport error","timestamp":"2026-04-07T17:24:15.456Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: orSHNZLFmeaZtKpVAAAn","timestamp":"2026-04-07T17:24:15.647Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"orSHNZLFmeaZtKpVAAAn looking for partner. Queue size: 0","timestamp":"2026-04-07T17:24:16.445Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk looking for partner. Queue size: 1","timestamp":"2026-04-07T17:24:17.394Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:17.396Z"}
+{"level":"info","message":"orSHNZLFmeaZtKpVAAAn skipped","timestamp":"2026-04-07T17:24:31.375Z"}
+{"level":"info","message":"Paired users: IIQDXXaQT2R00QcpAAAk with orSHNZLFmeaZtKpVAAAn","timestamp":"2026-04-07T17:24:31.377Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk skipped","timestamp":"2026-04-07T17:24:35.949Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:35.950Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk skipped","timestamp":"2026-04-07T17:24:36.631Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:36.632Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk skipped","timestamp":"2026-04-07T17:24:37.178Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:37.179Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk skipped","timestamp":"2026-04-07T17:24:37.848Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:37.849Z"}
+{"level":"info","message":"IIQDXXaQT2R00QcpAAAk skipped","timestamp":"2026-04-07T17:24:39.435Z"}
+{"level":"info","message":"Paired users: orSHNZLFmeaZtKpVAAAn with IIQDXXaQT2R00QcpAAAk","timestamp":"2026-04-07T17:24:39.435Z"}
+{"level":"warn","message":"User IIQDXXaQT2R00QcpAAAk heartbeat timeout, disconnecting","timestamp":"2026-04-07T17:25:18.587Z"}
+{"level":"info","message":"User disconnected: IIQDXXaQT2R00QcpAAAk, reason: server namespace disconnect","timestamp":"2026-04-07T17:25:18.588Z"}
+{"level":"warn","message":"User orSHNZLFmeaZtKpVAAAn heartbeat timeout, disconnecting","timestamp":"2026-04-07T17:25:18.588Z"}
+{"level":"info","message":"User disconnected: orSHNZLFmeaZtKpVAAAn, reason: server namespace disconnect","timestamp":"2026-04-07T17:25:18.588Z"}
+{"0":"*","level":"info","message":"Allowed CORS origins:","timestamp":"2026-04-08T16:43:59.845Z"}
+{"level":"info","message":"🚀 Server running on port 5000","timestamp":"2026-04-08T16:43:59.864Z"}
+{"level":"info","message":"Health check: http://localhost:5000/health","timestamp":"2026-04-08T16:43:59.865Z"}
+{"level":"info","message":"Network: http://192.168.56.1:5000","timestamp":"2026-04-08T16:43:59.868Z"}
+{"level":"info","message":"Network: http://10.195.50.96:5000","timestamp":"2026-04-08T16:43:59.869Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: -uzdzC4n9uvHMCsVAAAC","timestamp":"2026-04-08T16:46:32.944Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"User disconnected: -uzdzC4n9uvHMCsVAAAC, reason: transport error","timestamp":"2026-04-08T16:46:46.749Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: Ksu9VCl-_g4EwioSAAAF","timestamp":"2026-04-08T16:46:46.907Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"Ksu9VCl-_g4EwioSAAAF looking for partner. Queue size: 0","timestamp":"2026-04-08T16:46:49.878Z"}
+{"level":"info","message":"User disconnected: Ksu9VCl-_g4EwioSAAAF, reason: transport error","timestamp":"2026-04-08T16:46:57.617Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: 8A1KV2PXx5ygJoRaAAAI","timestamp":"2026-04-08T16:46:57.809Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"warn","message":"User 8A1KV2PXx5ygJoRaAAAI heartbeat timeout, disconnecting","timestamp":"2026-04-08T16:47:59.912Z"}
+{"level":"info","message":"User disconnected: 8A1KV2PXx5ygJoRaAAAI, reason: server namespace disconnect","timestamp":"2026-04-08T16:47:59.914Z"}
+{"0":"*","level":"info","message":"Allowed CORS origins:","timestamp":"2026-04-08T16:59:22.738Z"}
+{"level":"info","message":"🚀 Server running on port 5000","timestamp":"2026-04-08T16:59:22.762Z"}
+{"level":"info","message":"Health check: http://localhost:5000/health","timestamp":"2026-04-08T16:59:22.763Z"}
+{"level":"info","message":"Network: http://192.168.56.1:5000","timestamp":"2026-04-08T16:59:22.767Z"}
+{"level":"info","message":"Network: http://192.168.1.18:5000","timestamp":"2026-04-08T16:59:22.767Z"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: rIsrdo29u10YnO-aAAAB","timestamp":"2026-04-08T16:59:23.039Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"ip":"192.168.56.1","level":"info","message":"User connected: sj-K-a6kw-ThrdwwAAAE","timestamp":"2026-04-08T16:59:57.392Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"}
+{"level":"info","message":"rIsrdo29u10YnO-aAAAB looking for partner. Queue size: 0","timestamp":"2026-04-08T17:00:01.023Z"}
+{"level":"info","message":"sj-K-a6kw-ThrdwwAAAE looking for partner. Queue size: 1","timestamp":"2026-04-08T17:00:02.045Z"}
+{"level":"info","message":"Paired users: rIsrdo29u10YnO-aAAAB with sj-K-a6kw-ThrdwwAAAE","timestamp":"2026-04-08T17:00:02.315Z"}
+{"level":"info","message":"sj-K-a6kw-ThrdwwAAAE skipped","timestamp":"2026-04-08T17:00:08.769Z"}
+{"level":"info","message":"Paired users: rIsrdo29u10YnO-aAAAB with sj-K-a6kw-ThrdwwAAAE","timestamp":"2026-04-08T17:00:08.771Z"}
+{"level":"info","message":"User disconnected: rIsrdo29u10YnO-aAAAB, reason: transport error","timestamp":"2026-04-08T17:00:21.509Z"}
+{"level":"info","message":"User disconnected: sj-K-a6kw-ThrdwwAAAE, reason: transport error","timestamp":"2026-04-08T17:00:23.091Z"}
