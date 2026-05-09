@@ -32,17 +32,12 @@ app.use('/api/', limiter);
 // ===== CORS CONFIGURATION FOR PRODUCTION =====
 // Reads FRONTEND_URL env var set on Railway; supports comma-separated list of origins
 const buildAllowedOrigins = () => {
-  const base = [
-    'http://localhost:3000',
-    'https://localhost:3000'
-  ];
   if (process.env.FRONTEND_URL) {
-    // Support multiple origins separated by commas
     const envOrigins = process.env.FRONTEND_URL.split(',').map(o => o.trim()).filter(Boolean);
-    return [...new Set([...base, ...envOrigins])];
+    return [...new Set(['http://localhost:3000', 'https://localhost:3000', ...envOrigins])];
   }
-  // In development (no FRONTEND_URL set), allow all
-  return process.env.NODE_ENV === 'production' ? base : ['*'];
+  // Allow all origins by default — restrict via FRONTEND_URL env var in production
+  return ['*'];
 };
 
 const allowedOrigins = buildAllowedOrigins();
@@ -224,16 +219,19 @@ io.on('connection', (socket) => {
   socket.on('find-partner', () => {
     try {
       logger.info(`${socket.id} looking for partner. Queue size: ${waitingUsers.length}`);
-      
-      // Remove from any existing waiting or pairing
+
+      // Always remove from waiting first
       removeFromWaiting(socket.id);
-      
-      const existingPartner = activePairs.get(socket.id);
-      if (existingPartner) {
-        socket.emit('error', { message: 'Already in a call. Please end current call first.' });
-        return;
+
+      // BUGFIX: If user is still in activePairs from a previous session
+      // (can happen if skip/disconnect didn't clean up in time), force-remove them.
+      const stalePartner = activePairs.get(socket.id);
+      if (stalePartner) {
+        logger.info(`Cleaning up stale pair for ${socket.id} (was paired with ${stalePartner})`);
+        activePairs.delete(stalePartner);
+        activePairs.delete(socket.id);
       }
-      
+
       // Add to waiting queue
       if (addToWaiting(socket.id)) {
         socket.emit('waiting');
