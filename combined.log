@@ -107,3 +107,9 @@
 {"level":"info","message":"Paired users: rIsrdo29u10YnO-aAAAB with sj-K-a6kw-ThrdwwAAAE","timestamp":"2026-04-08T17:00:08.771Z"}
 {"level":"info","message":"User disconnected: rIsrdo29u10YnO-aAAAB, reason: transport error","timestamp":"2026-04-08T17:00:21.509Z"}
 {"level":"info","message":"User disconnected: sj-K-a6kw-ThrdwwAAAE, reason: transport error","timestamp":"2026-04-08T17:00:23.091Z"}
+{"0":"*","level":"info","message":"Allowed CORS origins:","timestamp":"2026-05-07T18:24:30.300Z"}
+{"level":"info","message":"🚀 Server running on port 5000","timestamp":"2026-05-07T18:24:30.327Z"}
+{"level":"info","message":"Health check: http://localhost:5000/health","timestamp":"2026-05-07T18:24:30.330Z"}
+{"level":"info","message":"Network: http://192.168.56.1:5000","timestamp":"2026-05-07T18:24:30.335Z"}
+{"level":"info","message":"Network: http://192.168.1.21:5000","timestamp":"2026-05-07T18:24:30.335Z"}
+{"level":"info","message":"SIGINT signal received: closing HTTP server","timestamp":"2026-05-07T18:51:41.709Z"}
