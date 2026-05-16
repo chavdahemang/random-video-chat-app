@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const http = require('http');
 const { Server } = require('socket.io');
@@ -44,7 +45,7 @@ const allowedOrigins = buildAllowedOrigins();
 logger.info('Allowed CORS origins:', allowedOrigins);
 
 app.use(cors({
-  origin: function(origin, callback) {
+  origin: function (origin, callback) {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
     // Allow all in non-production when no FRONTEND_URL is set
@@ -63,14 +64,14 @@ app.use(cors({
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: allowedOrigins.includes('*') ? '*' : allowedOrigins,
+    origin: true,
     methods: ["GET", "POST"],
-    credentials: true
+    credentials: false
   },
   // Production optimizations
   pingTimeout: 60000,
   pingInterval: 25000,
-  transports: ['websocket', 'polling'],
+  transports: ['websocket'],
   allowEIO3: true
 });
 
@@ -106,7 +107,7 @@ function addToWaiting(socketId) {
 function cleanupDisconnectedUser(socketId) {
   // Remove from waiting list
   removeFromWaiting(socketId);
-  
+
   // Remove from active pairs
   const partnerId = activePairs.get(socketId);
   if (partnerId) {
@@ -120,7 +121,7 @@ function cleanupDisconnectedUser(socketId) {
     activePairs.delete(partnerId);
     activePairs.delete(socketId);
   }
-  
+
   // Clean up metadata
   onlineUsers.delete(socketId);
   userMetadata.delete(socketId);
@@ -132,29 +133,29 @@ function tryMatch() {
     while (waitingUsers.length >= 2) {
       const user1Id = waitingUsers.shift();
       const user2Id = waitingUsers.shift();
-      
+
       const socket1 = io.sockets.sockets.get(user1Id);
       const socket2 = io.sockets.sockets.get(user2Id);
-      
+
       // Verify both sockets are still connected
       if (socket1 && socket2 && socket1.connected && socket2.connected) {
         // Create the pair
         activePairs.set(user1Id, user2Id);
         activePairs.set(user2Id, user1Id);
-        
+
         // Notify both users
-        socket1.emit('paired', { 
-          partnerId: user2Id, 
+        socket1.emit('paired', {
+          partnerId: user2Id,
           initiator: true,
           timestamp: Date.now()
         });
-        
-        socket2.emit('paired', { 
-          partnerId: user1Id, 
+
+        socket2.emit('paired', {
+          partnerId: user1Id,
           initiator: false,
           timestamp: Date.now()
         });
-        
+
         logger.info(`Paired users: ${user1Id} with ${user2Id}`);
       } else {
         // If either socket is invalid, put back the valid one
@@ -184,27 +185,27 @@ setInterval(() => {
 // ===== SOCKET.IO EVENT HANDLERS =====
 io.on('connection', (socket) => {
   const connectedAt = Date.now();
-  
+
   // Store metadata
   userMetadata.set(socket.id, {
     ip: socket.handshake.address,
     userAgent: socket.handshake.headers['user-agent'],
     connectedAt
   });
-  
+
   onlineUsers.set(socket.id, {
     lastHeartbeat: connectedAt,
     connectedAt
   });
-  
+
   logger.info(`User connected: ${socket.id}`, {
     ip: socket.handshake.address,
     userAgent: socket.handshake.headers['user-agent']
   });
-  
+
   // Broadcast online users count
   io.emit("online-users", onlineUsers.size);
-  
+
   // ===== HEARTBEAT HANDLER =====
   socket.on('heartbeat', () => {
     if (onlineUsers.has(socket.id)) {
@@ -214,7 +215,7 @@ io.on('connection', (socket) => {
       });
     }
   });
-  
+
   // ===== FIND PARTNER HANDLER =====
   socket.on('find-partner', () => {
     try {
@@ -244,7 +245,7 @@ io.on('connection', (socket) => {
       socket.emit('error', { message: 'Internal server error' });
     }
   });
-  
+
   // ===== SIGNAL HANDLER =====
   socket.on('signal', ({ to, signal }) => {
     try {
@@ -254,7 +255,7 @@ io.on('connection', (socket) => {
         logger.warn(`Signal mismatch: ${socket.id} trying to signal ${to} but paired with ${partnerId}`);
         return;
       }
-      
+
       const targetSocket = io.sockets.sockets.get(to);
       if (targetSocket && targetSocket.connected) {
         targetSocket.emit('signal', {
@@ -270,18 +271,18 @@ io.on('connection', (socket) => {
       logger.error('Error in signal handler:', error);
     }
   });
-  
+
   // ===== SKIP HANDLER =====
   socket.on('skip', () => {
     try {
       logger.info(`${socket.id} skipped`);
-      
+
       const partnerId = activePairs.get(socket.id);
-      
+
       if (partnerId) {
         // User was in an active call
         const partnerSocket = io.sockets.sockets.get(partnerId);
-        
+
         if (partnerSocket && partnerSocket.connected) {
           partnerSocket.emit('partner-left', { reason: 'user_skipped' });
           // Add partner back to waiting queue
@@ -289,16 +290,16 @@ io.on('connection', (socket) => {
             partnerSocket.emit('waiting');
           }
         }
-        
+
         // Clean up the pair
         activePairs.delete(partnerId);
         activePairs.delete(socket.id);
-        
+
         // Add current user back to waiting queue
         if (addToWaiting(socket.id)) {
           socket.emit('waiting');
         }
-        
+
         // Try to match remaining users
         tryMatch();
       } else {
@@ -312,7 +313,7 @@ io.on('connection', (socket) => {
       socket.emit('error', { message: 'Failed to skip partner' });
     }
   });
-  
+
   // ===== CHAT MESSAGE HANDLER =====
   socket.on("chat-message", ({ to, message }) => {
     try {
@@ -321,12 +322,12 @@ io.on('connection', (socket) => {
         socket.emit('error', { message: 'Invalid message length' });
         return;
       }
-      
+
       // Sanitize message (basic XSS prevention)
       const sanitizedMessage = message
         .replace(/[<>]/g, '')
         .substring(0, 500);
-      
+
       const partner = io.sockets.sockets.get(to);
       if (partner && partner.connected) {
         partner.emit("chat-message", {
@@ -339,24 +340,24 @@ io.on('connection', (socket) => {
       logger.error('Error in chat-message:', error);
     }
   });
-  
+
   // ===== DISCONNECT HANDLER =====
   socket.on('disconnect', (reason) => {
     try {
       logger.info(`User disconnected: ${socket.id}, reason: ${reason}`);
-      
+
       cleanupDisconnectedUser(socket.id);
-      
+
       // Broadcast updated online count
       io.emit("online-users", onlineUsers.size);
-      
+
       // Try to match remaining users
       tryMatch();
     } catch (error) {
       logger.error('Error in disconnect handler:', error);
     }
   });
-  
+
   // ===== ERROR HANDLER =====
   socket.on('error', (error) => {
     logger.error(`Socket error for ${socket.id}:`, error);
@@ -416,7 +417,7 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, '0.0.0.0', () => {
   logger.info(`🚀 Server running on port ${PORT}`);
   logger.info(`Health check: http://localhost:${PORT}/health`);
-  
+
   // Get all network interfaces
   const networkInterfaces = require('os').networkInterfaces();
   Object.keys(networkInterfaces).forEach((interfaceName) => {
